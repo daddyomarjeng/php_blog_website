@@ -1,5 +1,9 @@
 <?php 
 
-    echo "Hello Blog"
+    include('../includes/header.php');
+
+
+
+    include('../includes/footer.php');
 
 ?>
