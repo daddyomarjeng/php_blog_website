@@ -19,10 +19,11 @@
         } else {
 
         ?>
-        <li class="nav-item profile"><a href="#" class="nav-link">
+        <li class="nav-item"><a href="#" class="nav-link profile">
                 <?= $_SESSION['username'] ?> &#8595;
             </a>
             <ul class="profile-items">
+                <li class="profile-item"><a href="#" class="profile-link">My Profile</a></li>
                 <li class="profile-item"><a href="add-post.php" class="profile-link">Add Post</a></li>
                 <li class="profile-item"><a href="#" class="profile-link">Logout</a></li>
             </ul>
