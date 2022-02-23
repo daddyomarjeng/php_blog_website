@@ -1,9 +1,15 @@
-<?php 
+<?php
+include('includes/header.php');
+?>
 
-    include('includes/header.php');
+<div class="container">
 
+    <?php include('messages.php') ?>
 
+    <h1>Home Page</h1>
 
-    include('includes/footer.php');
+</div>
 
+<?php
+include('includes/footer.php');
 ?>
