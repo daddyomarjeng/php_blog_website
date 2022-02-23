@@ -5,3 +5,30 @@ email,
 password,
 role
 created_at
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Database
+1 - host
+2 - username
+3 - password
+4 - Database
