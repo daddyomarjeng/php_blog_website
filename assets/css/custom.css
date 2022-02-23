@@ -39,3 +39,9 @@ nav {
     margin-left: 20px;
     font-size: 2rem
 }
+
+@media (max-width:528px) {
+    nav {
+        flex-direction: column;
+    }
+}
