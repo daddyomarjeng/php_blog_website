@@ -7,10 +7,6 @@ include('includes/header.php');
     <h1 class="form-header">Login Form</h1>
     <form action="func.php" method="post">
         <div class="form-group">
-            <label for="fullname">Fullname</label>
-            <input type="text" class="form-control" placeholder="Fullname">
-        </div>
-        <div class="form-group">
             <label for="fullname">Email</label>
             <input type="email" class="form-control" placeholder="Fullname">
         </div>
