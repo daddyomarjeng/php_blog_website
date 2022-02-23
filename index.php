@@ -1,9 +1,9 @@
-<?php 
+<?php
+include('includes/header.php');
+?>
 
-    include('includes/header.php');
+<h1>Home Page</h1>
 
-
-
-    include('includes/footer.php');
-
+<?php
+include('includes/footer.php');
 ?>

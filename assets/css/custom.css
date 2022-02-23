@@ -1,0 +1,10 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    list-style-type: none;
+}
