@@ -8,17 +8,17 @@ include('includes/header.php');
     <form action="func.php" method="post">
         <div class="form-group">
             <label for="fullname">Fullname</label>
-            <input type="text" class="form-control" placeholder="Fullname">
+            <input name="fullname" type="text" class="form-control" placeholder="Fullname">
         </div>
         <div class="form-group">
-            <label for="fullname">Email</label>
-            <input type="email" class="form-control" placeholder="Fullname">
+            <label for="email">Email</label>
+            <input name="email" type="email" class="form-control" placeholder="Fullname">
         </div>
         <div class="form-group">
-            <label for="fullname">Password</label>
-            <input type="password" class="form-control" placeholder="Fullname">
+            <label for="password">Password</label>
+            <input name="password" type="password" class="form-control" placeholder="Fullname">
         </div>
-        <button type="submit" class="btn btn-submit">Login</button>
+        <button type="submit" class="btn btn-submit" name="signup-btn">SignUp</button>
     </form>
 </div>
 

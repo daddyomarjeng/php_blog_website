@@ -14,4 +14,4 @@ if (!$con) {
 	die();
 }
 
-echo "Success, connected to database";
+// echo "Success, connected to database";
