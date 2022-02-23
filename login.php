@@ -10,13 +10,13 @@ include('includes/header.php');
     <form action="func.php" method="post">
         <div class="form-group">
             <label for="fullname">Email</label>
-            <input type="email" class="form-control" placeholder="Fullname">
+            <input name="email" type="email" class="form-control" placeholder="Fullname" required>
         </div>
         <div class="form-group">
             <label for="fullname">Password</label>
-            <input type="password" class="form-control" placeholder="Fullname">
+            <input name="password" type="password" class="form-control" placeholder="Fullname" required>
         </div>
-        <button type="submit" class="btn btn-submit">Login</button>
+        <button name="login-btn" type="submit" class="btn btn-submit">Login</button>
     </form>
 </div>
 

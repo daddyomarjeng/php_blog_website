@@ -101,6 +101,24 @@ form {
 
 }
 
+/* Messages */
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Home Screen */
+.container {
+    margin-top: 100px;
+}
+
 @media (max-width:528px) {
     nav {
         flex-direction: column;
