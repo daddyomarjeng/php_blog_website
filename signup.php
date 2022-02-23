@@ -1,9 +1,12 @@
 <?php
 include('includes/header.php');
-
 ?>
 
 <div class="form-container">
+
+
+    <?php include('messages.php') ?>
+
     <h1 class="form-header">SignUp Form</h1>
     <form action="func.php" method="post">
         <div class="form-group">
