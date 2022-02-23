@@ -23,7 +23,7 @@
                 <?= $_SESSION['username'] ?> &#8595;
             </a>
             <ul class="profile-items">
-                <li class="profile-item"><a href="#" class="profile-link">Add Post</a></li>
+                <li class="profile-item"><a href="add-post.php" class="profile-link">Add Post</a></li>
                 <li class="profile-item"><a href="#" class="profile-link">Logout</a></li>
             </ul>
         </li>
