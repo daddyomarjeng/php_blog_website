@@ -36,6 +36,7 @@ if (isset($_POST['login-btn'])) {
     if (mysqli_num_rows($query_run) > 0) {
         $user  = mysqli_fetch_array($query_run);
         $username = $user['fullname'];
+        $_SESSION['auth'] = true;
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "Login Successfull, Welcome $username";
         header("Location: index.php");
