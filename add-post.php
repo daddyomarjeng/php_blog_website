@@ -1,3 +1,4 @@
+<?php include('auth.php'); ?>
 <?php include('includes/header.php'); ?>
 
 <div class="container">
