@@ -6,6 +6,10 @@ include('includes/header.php');
 
 <div class="form-container">
     <?php include('messages.php') ?>
+    <?php
+    include('middlewares/loggedin.php');
+
+    ?>
 
     <h1 class="form-header">Login Form</h1>
     <form class="form" action="func.php" method="post">
