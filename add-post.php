@@ -22,7 +22,7 @@
             <input name="image" type="file" placeholder="Choose">
         </div>
         <div class="form-group">
-            <button type="submit" class="btn">Create Post</button>
+            <button name="add_post" type="submit" class="btn">Create Post</button>
         </div>
     </form>
 </div>

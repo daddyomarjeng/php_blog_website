@@ -47,3 +47,7 @@ if (isset($_POST['login-btn'])) {
         exit(0);
     }
 }
+
+// Create Post
+if (isset($_POST['add_post'])) {
+}
