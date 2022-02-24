@@ -2,7 +2,7 @@
 
 <div class="container">
     <h1 class="form-header">Create a new Post</h1>
-    <form style="width:80%; margin: 0 auto; padding: 30px" action="func.php" method="post">
+    <form class="form" style="width:80%; margin: 0 auto; padding: 30px" action="func.php" method="post">
         <div class="form-group">
             <label for="title">Title</label>
             <input name="title" type="text" class="form-control" placeholder="Enter post title">

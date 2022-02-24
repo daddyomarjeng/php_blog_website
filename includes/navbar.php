@@ -25,7 +25,11 @@
             <ul class="profile-items">
                 <li class="profile-item"><a href="#" class="profile-link">My Profile</a></li>
                 <li class="profile-item"><a href="add-post.php" class="profile-link">Add Post</a></li>
-                <li class="profile-item"><a href="#" class="profile-link">Logout</a></li>
+                <li class="profile-item">
+                    <form action="func.php" method="post">
+                        <button name="logout" type="submit" class="profile-link">Logout</button>
+                    </form>
+                </li>
             </ul>
         </li>
         <?php

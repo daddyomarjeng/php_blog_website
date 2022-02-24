@@ -83,7 +83,7 @@ nav {
     font-size: 26px;
 }
 
-form {
+.form {
     width: 500px;
     /* min-width: 200px; */
     min-height: 500px;

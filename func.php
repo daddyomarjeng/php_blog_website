@@ -48,6 +48,15 @@ if (isset($_POST['login-btn'])) {
     }
 }
 
+// Logout
+if (isset($_POST['logout'])) {
+    // unset($_SESSION['auth']);
+    session_destroy();
+    $_SESSION['success'] = 'Logged Out Successfully';
+    header("Location: login.php");
+    exit(0);
+}
+
 // Create Post
 if (isset($_POST['add_post'])) {
 }

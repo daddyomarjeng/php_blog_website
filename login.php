@@ -8,7 +8,7 @@ include('includes/header.php');
     <?php include('messages.php') ?>
 
     <h1 class="form-header">Login Form</h1>
-    <form action="func.php" method="post">
+    <form class="form" action="func.php" method="post">
         <div class="form-group">
             <label for="fullname">Email</label>
             <input name="email" type="email" class="form-control" placeholder="Fullname" required>
