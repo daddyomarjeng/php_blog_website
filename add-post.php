@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
             <label for="title">Choose Blog Image</label>
-            <input type="file" placeholder="Choose">
+            <input name="image" type="file" placeholder="Choose">
         </div>
         <div class="form-group">
             <button type="submit" class="btn">Create Post</button>
