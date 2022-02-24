@@ -16,6 +16,12 @@ body {
     margin: 0 auto;
 }
 
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 /* navbar */
 nav {
     display: flex;
@@ -147,7 +153,6 @@ nav {
 }
 
 /* Create Post */
-
 
 @media (max-width:528px) {
     nav {
