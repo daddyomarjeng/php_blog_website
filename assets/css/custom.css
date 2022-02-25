@@ -46,6 +46,24 @@ nav {
     font-size: 2rem
 }
 
+.nav-right {
+    display: flex;
+    background-color: tomato;
+    border-radius: 20px;
+    align-items: center;
+    margin: 0 10px;
+
+}
+
+.nav-right li {
+    font-size: 2rem;
+    margin: 0 10px;
+}
+
+.nav-right li a {
+    color: #fff;
+}
+
 .profile {
     position: relative;
 }
