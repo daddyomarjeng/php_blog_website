@@ -9,7 +9,7 @@ include('includes/header.php');
     <?php include('messages.php') ?>
 
     <h1 class="form-header">SignUp Form</h1>
-    <form action="func.php" method="post">
+    <form class="form" action="func.php" method="post">
         <div class="form-group">
             <label for="fullname">Fullname</label>
             <input name="fullname" type="text" class="form-control" placeholder="Fullname" required>
@@ -28,4 +28,3 @@ include('includes/header.php');
 
 
 <?php include('includes/footer.php') ?>
-

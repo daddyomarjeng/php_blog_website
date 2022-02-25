@@ -6,9 +6,13 @@ include('includes/header.php');
 
 <div class="form-container">
     <?php include('messages.php') ?>
+    <?php
+    include('middlewares/loggedin.php');
+
+    ?>
 
     <h1 class="form-header">Login Form</h1>
-    <form action="func.php" method="post">
+    <form class="form" action="func.php" method="post">
         <div class="form-group">
             <label for="fullname">Email</label>
             <input name="email" type="email" class="form-control" placeholder="Fullname" required>
@@ -23,4 +27,3 @@ include('includes/header.php');
 
 
 <?php include('includes/footer.php') ?>
-

@@ -6,9 +6,11 @@ password,
 role
 created_at
 
-
-
-
+# Categories
+id,
+name,
+slug,
+show,
 
 
 

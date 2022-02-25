@@ -36,6 +36,7 @@ if (isset($_POST['login-btn'])) {
     if (mysqli_num_rows($query_run) > 0) {
         $user  = mysqli_fetch_array($query_run);
         $username = $user['fullname'];
+        $_SESSION['auth'] = true;
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "Login Successfull, Welcome $username";
         header("Location: index.php");
@@ -45,4 +46,17 @@ if (isset($_POST['login-btn'])) {
         header('Location: login.php');
         exit(0);
     }
+}
+
+// Logout
+if (isset($_POST['logout'])) {
+    // unset($_SESSION['auth']);
+    session_destroy();
+    $_SESSION['success'] = 'Logged Out Successfully';
+    header("Location: login.php");
+    exit(0);
+}
+
+// Create Post
+if (isset($_POST['add_post'])) {
 }
