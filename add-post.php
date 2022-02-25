@@ -12,7 +12,8 @@ if (mysqli_num_rows($query_run) > 0) {
     <?php include('messages.php'); ?>
 
     <h1 class="form-header">Create a new Post</h1>
-    <form class="form" style="width:80%; margin: 0 auto; padding: 30px" action="func.php" method="post">
+    <form enctype="multipart/form-data" class="form" style="width:80%; margin: 0 auto; padding: 30px" action="func.php"
+        method="post">
         <div class="form-group">
             <label for="title">Category</label>
             <select required name="category_id" class="form-control">
