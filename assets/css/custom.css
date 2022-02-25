@@ -219,17 +219,49 @@ nav {
 .blogs-section {
     margin: 40px 0;
     display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .blogs {
     flex: 4;
 }
 
+.blogs-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .latest {
     flex: 1;
 }
 
-/* Create Post */
+.latest-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.latest-content .post-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.post-card {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 0 1rem;
+}
+
+.heading {
+    color: tomato;
+    border-bottom: 2px solid tomato;
+    padding-bottom: 1rem;
+    width: fit-content
+}
 
 @media (max-width:528px) {
     nav {
@@ -270,5 +302,13 @@ nav {
 
     .overlay .h-1 {
         font-size: 2rem;
+    }
+
+    .blogs-section {
+        flex-direction: column;
+    }
+
+    .post-card {
+        width: 100%;
     }
 }

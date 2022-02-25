@@ -14,11 +14,44 @@ include('includes/header.php');
 
     <section class="blogs-section">
         <div class="blogs">
-            blogs
+            <h1 class="heading">Our Blog Posts</h1>
+            <div class="blogs-content">
+                <div class="post-card">
+                    <h1>Author</h1>
+                    <h4>Title</h4>
+                    <small>22-march-2022</small>
+                </div>
+                <div class="post-card">
+                    <h1>Author</h1>
+                    <h4>Title</h4>
+                    <small>22-march-2022</small>
+                </div>
+                <div class="post-card">
+                    <h1>Author</h1>
+                    <h4>Title</h4>
+                    <small>22-march-2022</small>
+                </div>
+                <div class="post-card">
+                    <h1>Author</h1>
+                    <h4>Title</h4>
+                    <small>22-march-2022</small>
+                </div>
+            </div>
         </div>
-        <div class="latest">
-            latest
-        </div>
+        <div class="">
+            <h1 class="heading">Latest Blog Posts</h1>
+            <div class="latest-content">
+                <div class="post-card">
+                    <h1>Author</h1>
+                    <h4>Title</h4>
+                    <small>22-march-2022</small>
+                </div>
+                <div class="post-card">
+                    <h1>Author</h1>
+                    <h4>Title</h4>
+                    <small>22-march-2022</small>
+                </div>
+            </div>
     </section>
 </div>
 
