@@ -15,11 +15,11 @@ include('includes/header.php');
     <form class="form" action="func.php" method="post">
         <div class="form-group">
             <label for="fullname">Email</label>
-            <input name="email" type="email" class="form-control" placeholder="Fullname" required>
+            <input name="email" type="email" class="form-control" placeholder="email">
         </div>
         <div class="form-group">
             <label for="fullname">Password</label>
-            <input name="password" type="password" class="form-control" placeholder="Fullname" required>
+            <input name="password" type="password" class="form-control" placeholder="Password">
         </div>
         <button name="login-btn" type="submit" class="btn btn-submit">Login</button>
     </form>

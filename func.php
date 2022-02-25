@@ -4,9 +4,9 @@ include('config/db_connect.php');
 // SignUP
 if (isset($_POST['signup-btn'])) {
 
-    $fullname = $_POST['fullname'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $fullname = mysqli_real_escape_string($con, $_POST['fullname']);
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
 
     $query = "INSERT INTO users (fullname, email, password) VALUES ('$fullname', '$email', '$password')";
     $query_run = mysqli_query($con, $query);
@@ -27,8 +27,8 @@ if (isset($_POST['signup-btn'])) {
 // Login
 if (isset($_POST['login-btn'])) {
 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
 
     $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password' LIMIT 1";
     $query_run = mysqli_query($con, $query);
