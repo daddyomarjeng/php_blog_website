@@ -62,7 +62,6 @@ if (isset($_POST['add_post'])) {
     $category_id = mysqli_real_escape_string($con, $_POST['category_id']);
     $title = mysqli_real_escape_string($con, $_POST['title']);
     $content = mysqli_real_escape_string($con, $_POST['content']);
-    $image = mysqli_real_escape_string($con, $_POST['image']);
 
     $slug_array = explode(' ', $title);
     $slug = date("Y-m-d-H:i:s");
@@ -75,11 +74,20 @@ if (isset($_POST['add_post'])) {
     // var_dump($slug);
     // exit(0);
 
+    // $image = $_FILES['image'];
+    $image = $_FILES['image']['name'];
+    // var_dump($image);
+    $image_extension = pathinfo($image)['extension'];
+    $image_name = time() . '.' . $image_extension;
+    // var_dump($image_name);
+    // exit(0);
+
     $query = "INSERT INTO posts
-                        (category_id, title, slug, content) 
-                VALUES('$category_id','$title','$slug','$content')";
+                        (category_id, title, slug, content, image) 
+                VALUES('$category_id','$title','$slug','$content', '$image_name')";
     $query_run = mysqli_query($con, $query);
     if ($query_run) {
+        move_uploaded_file($_FILES['image']['tmp_name'], 'uploads/' . $image_name);
         $_SESSION['success'] = "Post Created Successfully";
         header("Location: index.php");
     } else {
