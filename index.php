@@ -7,8 +7,8 @@ include('includes/header.php');
     <div class="banner">
         <div class="overlay">
             <span class="h-1">Are you a Writer?</span>
-            <span>Or you want to Start Writing?</span>
-            <a href="add-post.php" class="btn-home">Write Now</a>
+            <span>Or you want to write your first blog?</span>
+            <a href="add-post.php" class="btn-home">Start Writing</a>
         </div>
     </div>
 
