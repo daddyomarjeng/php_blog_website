@@ -34,7 +34,7 @@ if (mysqli_num_rows($query_run) > 0) {
         } else {
 
         ?>
-        <li class="nav-item"><a href="#" class="nav-link profile">
+        <li class="nav-item b"><a href="#" class="nav-link profile">
                 <?= $_SESSION['username'] ?> &#8595;
             </a>
             <ul class="profile-items">

@@ -48,10 +48,10 @@ nav {
 
 .nav-right {
     display: flex;
-    background-color: tomato;
     border-radius: 20px;
     align-items: center;
     margin: 0 10px;
+    border: 2px solid #ddd;
 
 }
 
@@ -61,7 +61,7 @@ nav {
 }
 
 .nav-right li a {
-    color: #fff;
+    /* color: #fff; */
 }
 
 .profile {
@@ -82,6 +82,12 @@ nav {
     padding: 10px;
     display: none;
     transition: all 1s ease;
+}
+
+.b {
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+    padding: 0 5px;
 }
 
 .profile-item {
