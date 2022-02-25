@@ -17,11 +17,14 @@ created_at
 id,
 title,
 slug,
+created_at,
 
 
 # posts
 id,
-Category,
+Category_id,
 title,
 slug,
-content
+content,
+image,
+created_at,

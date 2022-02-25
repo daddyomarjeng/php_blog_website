@@ -4,7 +4,7 @@ include('includes/header.php');
 ?>
 
 
-<div class="form-container">
+<div class="form-container container">
     <?php include('messages.php') ?>
     <?php
     include('middlewares/loggedin.php');
