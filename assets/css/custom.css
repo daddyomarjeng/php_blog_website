@@ -34,6 +34,7 @@ nav {
     left: 0;
     right: 0;
     padding: 0 20px;
+    /* min-height: 70px */
 }
 
 .nav-items {
@@ -45,6 +46,21 @@ nav {
     margin-left: 20px;
     font-size: 2rem
 }
+
+.nav-right {
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    margin: 0 10px;
+    border: 2px solid #ddd;
+
+}
+
+.nav-right li {
+    font-size: 2rem;
+    margin: 0 10px;
+}
+
 
 .profile {
     position: relative;
@@ -66,6 +82,12 @@ nav {
     transition: all 1s ease;
 }
 
+.b {
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+    padding: 0 5px;
+}
+
 .profile-item {
     font-size: 20px;
     border-bottom: 1px solid #888;
@@ -76,22 +98,19 @@ nav {
 /* login and signup */
 .form-container {
     min-height: 60vh;
-    margin-top: 200px;
+    /* margin-top: 200px; */
     /* background-color: #cccc; */
     display: flex;
     flex-direction: column;
+    /* flex-wrap: wrap; */
     align-items: center;
-}
+    /* justify-content: center; */
+    min-width: 80vw;
 
-.form-header {
-    font-weight: bold;
-    text-align: center;
-    font-size: 26px;
 }
 
 .form {
-    width: 500px;
-    /* min-width: 200px; */
+    min-width: 35%;
     min-height: 500px;
     background-color: #fff;
     box-shadow: 3px 2px 10px 10px rgba(0, 0, 0, 0.1);
@@ -99,6 +118,12 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.form-header {
+    font-weight: bold;
+    text-align: center;
+    font-size: 26px;
 }
 
 .form-group {

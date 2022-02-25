@@ -1,3 +1,10 @@
+
+# Database
+1 - host
+2 - username
+3 - password
+4 - Database
+
 # User ---
 id,
 fullname,
@@ -8,29 +15,16 @@ created_at
 
 # Categories
 id,
-name,
+title,
 slug,
-show,
+created_at,
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Database
-1 - host
-2 - username
-3 - password
-4 - Database
+# posts
+id,
+Category_id,
+title,
+slug,
+content,
+image,
+created_at,

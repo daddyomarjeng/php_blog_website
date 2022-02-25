@@ -1,9 +1,10 @@
 <?php
 include('includes/header.php');
+include('middlewares/loggedin.php');
 ?>
 
 
-<div class="form-container">
+<div class="form-container container">
 
 
     <?php include('messages.php') ?>
