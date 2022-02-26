@@ -225,7 +225,7 @@ nav {
 }
 
 .blogs {
-    flex: 4;
+    flex: 3;
 }
 
 .blogs-content {
@@ -255,6 +255,12 @@ nav {
     width: 30%;
     margin-bottom: 20px;
     padding: 0 1rem;
+    color: #999
+}
+
+.post-card small {
+    display: inline-block;
+    font-size: 0.9rem;
 }
 
 .heading {

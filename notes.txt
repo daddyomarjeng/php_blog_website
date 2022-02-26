@@ -22,6 +22,7 @@ created_at,
 
 # posts
 id,
+user_id,
 Category_id,
 title,
 slug,
