@@ -37,8 +37,9 @@ if (isset($_POST['login-btn'])) {
         $user  = mysqli_fetch_array($query_run);
         $username = $user['fullname'];
         $_SESSION['auth'] = true;
+        $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $username;
-        $_SESSION['success'] = "Login Successfull, Welcome $username";
+        // $_SESSION['success'] = "Login Successfull, Welcome $username";
         header("Location: index.php");
         exit(0);
     } else {
@@ -59,6 +60,7 @@ if (isset($_POST['logout'])) {
 
 // Create Post
 if (isset($_POST['add_post'])) {
+    $user_id = $_SESSION['user_id'];
     $category_id = mysqli_real_escape_string($con, $_POST['category_id']);
     $title = mysqli_real_escape_string($con, $_POST['title']);
     $content = mysqli_real_escape_string($con, $_POST['content']);
@@ -83,8 +85,8 @@ if (isset($_POST['add_post'])) {
     // exit(0);
 
     $query = "INSERT INTO posts
-                        (category_id, title, slug, content, image) 
-                VALUES('$category_id','$title','$slug','$content', '$image_name')";
+                        (user_id, category_id, title, slug, content, image) 
+                VALUES('$user_id','$category_id','$title','$slug','$content', '$image_name')";
     $query_run = mysqli_query($con, $query);
     if ($query_run) {
         move_uploaded_file($_FILES['image']['tmp_name'], 'uploads/' . $image_name);
