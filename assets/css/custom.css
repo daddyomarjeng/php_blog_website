@@ -24,6 +24,7 @@ button {
 
 /* navbar */
 nav {
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,6 +83,9 @@ nav {
     transition: all 1s ease;
     /* z-index: 10; */
     background-color: white;
+    /* z-index: 200;
+    background-color: red; */
+
 }
 
 .b {
@@ -217,18 +221,20 @@ nav {
     cursor: pointer;
 }
 
-.blogs-section {
+section {
     margin: 40px 0;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
-.blogs {
+.blogs,
+.categories {
     flex: 3;
 }
 
-.blogs-content {
+.blogs-content,
+.categories-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -244,18 +250,20 @@ nav {
     flex-direction: column;
 }
 
-.latest-content .post-card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
 
 .post-card {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
     width: 30%;
     margin-bottom: 20px;
     padding: 0 1rem;
-    color: #999
+    color: #999;
+    align-self: stretch;
+}
+
+.latest-content .post-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .post-card small {
@@ -311,7 +319,7 @@ nav {
         font-size: 2rem;
     }
 
-    .blogs-section {
+    section {
         flex-direction: column;
     }
 

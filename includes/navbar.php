@@ -9,6 +9,7 @@ if (mysqli_num_rows($query_run) > 0) {
 }
 ?>
 <nav>
+
     <a href="index.php" class="logo">
         <img src="assets/images/logo.png" alt="Logo" height="50px">
     </a>
@@ -17,7 +18,9 @@ if (mysqli_num_rows($query_run) > 0) {
         <?php
         foreach ($navItems as $navItem) {
         ?>
-        <li class="nav-item"><a href="#" class="nav-link"><?= $navItem['title'] ?></a></li>
+        <li class="nav-item"><a href="categories.php?category=<?= $navItem['slug'] ?>"
+                class="nav-link"><?= $navItem['title'] ?></a>
+        </li>
         <?php
         }
         ?>
@@ -34,7 +37,7 @@ if (mysqli_num_rows($query_run) > 0) {
         } else {
 
         ?>
-        <li class="nav-item b"><a href="#" class="nav-link profile">
+        <li class="nav-item b "><a href="#" class="nav-link profile">
                 <?= $_SESSION['username'] ?> &#8595;
             </a>
             <ul class="profile-items">
