@@ -243,6 +243,9 @@ section {
 
 .latest {
     flex: 1;
+    background-color: #ccc;
+    padding: 20px;
+    /* border-radius: 10px */
 }
 
 .latest-content {

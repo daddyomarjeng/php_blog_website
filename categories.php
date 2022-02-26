@@ -43,7 +43,7 @@ if (mysqli_num_rows($query_run) > 0) {
                 ?>
             </div>
         </div>
-        <div class="">
+        <div class="latest">
             <h1 class="heading">Latest Blog Posts</h1>
             <div class="latest-content">
                 <?php
