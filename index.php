@@ -44,11 +44,23 @@ if (mysqli_num_rows($query_run) > 0) {
                 <?php
                 foreach ($posts as $post) {
                 ?>
-                <a href="post.php?slug=<?= $post['slug'] ?>" class="post-card">
-                    <h4><?= $post['title'] ?></h4>
-                    <small>by: <?= $post['username'] ?></small>
-                    <small>Posted on: <?= date('d M Y', strtotime($post['created_at'])) ?></small>
-                </a>
+                <div class="post-card">
+                    <?php
+                        if ($_SESSION['user_id'] == $post['user_id']) {
+                        ?>
+                    <a class="edit-btn" href="edit-post.php?id=<?= $post['id'] ?>">
+                        Edit
+                    </a>
+                    <?php
+                        }
+                        ?>
+
+                    <a href="post.php?slug=<?= $post['slug'] ?>" class="">
+                        <h4><?= $post['title'] ?></h4>
+                        <small>by: <?= $post['username'] ?></small>
+                        <small>Posted on: <?= date('d M Y', strtotime($post['created_at'])) ?></small>
+                    </a>
+                </div>
 
                 <?php
                 }
