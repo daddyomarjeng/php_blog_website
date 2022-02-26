@@ -250,18 +250,20 @@ section {
     flex-direction: column;
 }
 
-.latest-content .post-card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
 
 .post-card {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
     width: 30%;
     margin-bottom: 20px;
     padding: 0 1rem;
-    color: #999
+    color: #999;
+    align-self: stretch;
+}
+
+.latest-content .post-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .post-card small {

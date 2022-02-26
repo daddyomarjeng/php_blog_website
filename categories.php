@@ -12,20 +12,22 @@ if (mysqli_num_rows($query_run) > 0) {
 
 // fetch posts of category
 $category_slug = $_GET['category'];
-$query = "SELECT u.fullname AS username, c.slug AS cat_slug, c.id AS cat_id, p.* FROM users u, categories c, posts p WHERE c.slug='$category_slug' AND u.id=p.user_id AND c.id=p.category_id ORDER BY p.id DESC ";
+$query = "SELECT u.fullname AS username, c.slug AS cat_slug, c.id AS cat_id, c.title AS cat_title, p.* FROM users u, categories c, posts p WHERE c.slug='$category_slug' AND u.id=p.user_id AND c.id=p.category_id ORDER BY p.id DESC ";
 $query_run = mysqli_query($con, $query);
 if (mysqli_num_rows($query_run) > 0) {
     $posts = $query_run;
+    $cat_name = mysqli_fetch_array($posts)['cat_title'];
 }
 ?>
 
 <div class="container">
     <?php
     // var_dump($posts);
+    // var_dump($cat_name);
     ?>
     <section class="">
         <div class="categories">
-            <h1 class="heading">Category</h1>
+            <h1 class="heading"><?= $cat_name ?></h1>
             <div class="categories-content">
                 <?php
                 foreach ($posts as $post) {
