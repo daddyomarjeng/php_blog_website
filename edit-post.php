@@ -23,7 +23,9 @@ if (mysqli_num_rows($query_run) > 0) {
 if ($post['user_id'] != $_SESSION['user_id']) {
     header("Location: index.php");
 }
-
+if (!$_GET['id']) {
+    header("Location: index.php");
+}
 ?>
 
 <div class="container">
@@ -71,8 +73,7 @@ if ($post['user_id'] != $_SESSION['user_id']) {
         <div class="form-group">
             <label for="title">Content</label>
             <textarea required name="content" id="" rows="3" class="form-control" style="resize:none"
-                placeholder="Enter your post content here"><?= $post['content'] ?>
-            </textarea>
+                placeholder="Enter your post content here"><?= $post['content'] ?></textarea>
         </div>
         <div class="form-group">
             <label for="title">Choose Blog Image</label>
