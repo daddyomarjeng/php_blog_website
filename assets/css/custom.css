@@ -287,6 +287,10 @@ section {
     width: fit-content
 }
 
+.post-nav {
+    color: tomato
+}
+
 @media (max-width:528px) {
     nav {
         flex-direction: column;

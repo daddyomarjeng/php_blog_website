@@ -10,25 +10,30 @@ if (mysqli_num_rows($query_run) > 0) {
     $latest = $query_run;
 }
 
-// fetch posts of category
-$category_slug = $_GET['category'];
-$query = "SELECT u.fullname AS username, c.slug AS cat_slug, c.id AS cat_id, c.title AS cat_title, p.* FROM users u, categories c, posts p WHERE c.slug='$category_slug' AND u.id=p.user_id AND c.id=p.category_id ORDER BY p.id DESC ";
+// fetch post
+$post_slug = $_GET['slug'];
+$query = "SELECT u.fullname AS username, c.slug AS cat_slug, c.id AS cat_id, c.title AS cat_title, p.* FROM users u, categories c, posts p WHERE p.slug='$post_slug' AND u.id=p.user_id AND c.id=p.category_id LIMIT 1";
 $query_run = mysqli_query($con, $query);
 if (mysqli_num_rows($query_run) > 0) {
-    $posts = $query_run;
-    $cat_name = mysqli_fetch_array($posts)['cat_title'];
+    $post = mysqli_fetch_array($query_run);
+    $cat_name = $post['cat_title'];
 }
 ?>
 
 <div class="container">
     <?php
-    // var_dump($posts);
+    var_dump($post);
     // var_dump($cat_name);
     ?>
     <section class="">
-        <div class="posts">
+        <div class="blogs">
+            <a class="post-nav" href="index.php">Home </a> >>
+            <a class="post-nav" href="categories.php?category=<?= $post['cat_slug'] ?>"><?= $post['cat_title'] ?> </a>
+            >>
+            <a class="post-nav" href="post.php?slug=<?= $post['slug'] ?>"><?= $post['title'] ?> </a>
+
             <h1 class="heading"><?= $post_name ?></h1>
-            <div class="categories-content">
+            <div class="blogs-content">
                 <?php
                 foreach ($posts as $post) {
                 ?>
