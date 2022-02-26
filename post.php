@@ -27,10 +27,27 @@ if (mysqli_num_rows($query_run) > 0) {
     ?>
     <section class="">
         <div class="post">
-            <a class="post-nav" href="index.php">Home </a> >>
-            <a class="post-nav" href="categories.php?category=<?= $post['cat_slug'] ?>"><?= $post['cat_title'] ?> </a>
-            >>
-            <a class="post-nav" href="post.php?slug=<?= $post['slug'] ?>"><?= $post['title'] ?> </a>
+            <div class="post-top">
+                <div class="">
+                    <a class="post-nav" href="index.php">Home </a> >>
+                    <a class="post-nav"
+                        href="categories.php?category=<?= $post['cat_slug'] ?>"><?= $post['cat_title'] ?>
+                    </a>
+                    >>
+                    <a class="post-nav" href="post.php?slug=<?= $post['slug'] ?>"><?= $post['title'] ?> </a>
+                </div>
+                <div class="">
+                    <?php
+                    if ($_SESSION['user_id'] == $post['user_id']) {
+                    ?>
+                    <a class="edit-btn" href="edit-post.php?id=<?= $post['id'] ?>">
+                        Edit
+                    </a>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
 
             <div class="post-content">
                 <?php
@@ -54,11 +71,23 @@ if (mysqli_num_rows($query_run) > 0) {
                 <?php
                 foreach ($latest as $post) {
                 ?>
-                <a href="post.php?slug=<?= $post['slug'] ?>" class="post-card">
-                    <h4><?= $post['title'] ?></h4>
-                    <small>by: <?= $post['username'] ?></small>
-                    <small>Posted on: <?= date('d M Y', strtotime($post['created_at'])) ?></small>
-                </a>
+                <div class="post-card">
+                    <?php
+                        if ($_SESSION['user_id'] == $post['user_id']) {
+                        ?>
+                    <a class="edit-btn" href="edit-post.php?id=<?= $post['id'] ?>">
+                        Edit
+                    </a>
+                    <?php
+                        }
+                        ?>
+
+                    <a href="post.php?slug=<?= $post['slug'] ?>" class="">
+                        <h4><?= $post['title'] ?></h4>
+                        <small>by: <?= $post['username'] ?></small>
+                        <small>Posted on: <?= date('d M Y', strtotime($post['created_at'])) ?></small>
+                    </a>
+                </div>
 
                 <?php
                 }

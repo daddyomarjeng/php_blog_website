@@ -187,6 +187,7 @@ nav {
 /* Home Screen */
 .container {
     margin-top: 100px;
+    margin-bottom: 300px;
 }
 
 .banner {
@@ -270,6 +271,7 @@ section {
     padding: 0 1rem;
     color: #999;
     align-self: stretch;
+    position: relative;
 }
 
 .latest-content .post-card {
@@ -277,6 +279,11 @@ section {
     flex-direction: column;
     width: 100%;
 }
+
+/* .latest-content .post-card .edit-btn {
+    position: absolute;
+    right: 0;
+} */
 
 .post-card small {
     display: inline-block;
@@ -317,6 +324,15 @@ section {
     text-align: center;
 }
 
+.post-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem 0;
+}
+
+
 .post-footer {
     border-top: 2px solid #999;
     padding: 2rem;
@@ -331,6 +347,31 @@ section {
 .post-date {
     font-size: 16px;
     color: #888;
+}
+
+.edit-btn {
+    /* background-color: tomato; */
+    /* float: right; */
+    /* margin-top: 1rem; */
+    padding: .3rem;
+    color: blue;
+    position: absolute;
+    right: 0;
+}
+
+.edit-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.delete-post {
+    background-color: rgb(253, 71, 71);
+    color: white;
+    padding: .5rem;
+    border-radius: 10px;
 }
 
 @media (max-width:528px) {
@@ -379,6 +420,15 @@ section {
     }
 
     .post-card {
+        width: 100%;
+    }
+
+    .edit-header {
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .delete-post {
         width: 100%;
     }
 }
