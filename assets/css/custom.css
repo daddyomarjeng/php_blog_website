@@ -34,7 +34,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 20px;
+    padding: 0 10px;
     /* min-height: 70px */
 }
 
@@ -45,13 +45,13 @@ nav {
 
 .nav-item {
     margin-left: 20px;
-    font-size: 2rem;
-    padding: 0 .5rem;
+    font-size: 1rem;
+    padding: 0 .3rem;
 }
 
 .nav-item:hover {
     background-color: tomato;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .nav-right {
@@ -431,6 +431,10 @@ footer {
     .nav-items {
         flex-wrap: wrap;
         align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
     }
 
     .profile-items {
