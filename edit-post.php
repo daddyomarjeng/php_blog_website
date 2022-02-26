@@ -38,7 +38,9 @@ if (!$_GET['id']) {
     <div class="edit-header">
         <h1 class="form-header">Edit Your Post</h1>
         <form action="func.php" method="post">
-            <button type="submit" name="delete-post" class="delete-post">Delete Post</button>
+            <input type="hidden" name="post_id" value="<?= $post['id'] ?>">
+            <input type="hidden" name="image" value="<?= $post['image'] ?>">
+            <button type="submit" name="delete_post" class="delete-post">Delete Post</button>
         </form>
     </div>
     <form enctype="multipart/form-data" class="form" style="width:80%; margin: 0 auto; padding: 30px" action="func.php"
