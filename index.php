@@ -13,7 +13,7 @@ if (mysqli_num_rows($query_run) > 0) {
 }
 
 // fetch latest posts
-$query = "SELECT u.id AS user_id, p.*  FROM users u, posts p WHERE u.id = p.user_id  ORDER BY p.id DESC LIMIT 3";
+$query = "SELECT u.id AS user_id, u.fullname AS username, p.*  FROM users u, posts p WHERE u.id = p.user_id  ORDER BY p.id DESC LIMIT 3";
 $query_run = mysqli_query($con, $query);
 if (mysqli_num_rows($query_run) > 0) {
     $latest = $query_run;
@@ -71,6 +71,7 @@ if (mysqli_num_rows($query_run) > 0) {
                 }
                 ?>
             </div>
+        </div>
     </section>
 </div>
 
