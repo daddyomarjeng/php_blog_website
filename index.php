@@ -30,10 +30,12 @@ if (mysqli_num_rows($query_run) > 0) {
     <div class="banner">
         <div class="overlay">
             <span class="h-1">Are you a Writer?</span>
-            <span>Or you want to write your first blog?</span>
+            <span>Or do you want to write your first blog?</span>
             <a href="add-post.php" class="btn-home">Start Writing</a>
         </div>
     </div>
+
+    <?php include('messages.php'); ?>
 
     <section class="blogs-section">
         <div class="blogs">
@@ -42,11 +44,11 @@ if (mysqli_num_rows($query_run) > 0) {
                 <?php
                 foreach ($posts as $post) {
                 ?>
-                <div class="post-card">
+                <a href="#" class="post-card">
                     <h4><?= $post['title'] ?></h4>
                     <small>by: <?= $post['username'] ?></small>
                     <small>Posted on: <?= date('d M Y', strtotime($post['created_at'])) ?></small>
-                </div>
+                </a>
 
                 <?php
                 }
@@ -59,11 +61,11 @@ if (mysqli_num_rows($query_run) > 0) {
                 <?php
                 foreach ($latest as $post) {
                 ?>
-                <div class="post-card">
+                <a href="#" class="post-card">
                     <h4><?= $post['title'] ?></h4>
                     <small>by: <?= $post['username'] ?></small>
                     <small>Posted on: <?= date('d M Y', strtotime($post['created_at'])) ?></small>
-                </div>
+                </a>
 
                 <?php
                 }
