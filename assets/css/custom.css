@@ -350,6 +350,21 @@ section {
     right: 0;
 }
 
+.edit-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.delete-post {
+    background-color: rgb(253, 71, 71);
+    color: white;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
 @media (max-width:528px) {
     nav {
         flex-direction: column;
@@ -396,6 +411,15 @@ section {
     }
 
     .post-card {
+        width: 100%;
+    }
+
+    .edit-header {
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .delete-post {
         width: 100%;
     }
 }

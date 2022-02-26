@@ -33,9 +33,19 @@ if ($post['user_id'] != $_SESSION['user_id']) {
     ?>
     <?php include('messages.php'); ?>
 
-    <h1 class="form-header">Edit Post</h1>
+    <div class="edit-header">
+        <h1 class="form-header">Edit Your Post</h1>
+        <form action="func.php" method="post">
+            <button type="submit" name="delete-post" class="delete-post">Delete Post</button>
+        </form>
+    </div>
     <form enctype="multipart/form-data" class="form" style="width:80%; margin: 0 auto; padding: 30px" action="func.php"
         method="post">
+        <input type="hidden" name="post_id" value="<?= $post['id'] ?>">
+        <input type="hidden" name="old_slug" value="<?= $post['slug'] ?>">
+        <input type="hidden" name="old_image" value="<?= $post['image'] ?>">
+        <input type="hidden" name="old_title" value="<?= $post['title'] ?>">
+
         <div class="form-group">
             <label for="title">Category</label>
             <select required name="category_id" class="form-control">
@@ -69,7 +79,7 @@ if ($post['user_id'] != $_SESSION['user_id']) {
             <input name="image" type="file" placeholder="Choose">
         </div>
         <div class="form-group">
-            <button name="add_post" type="submit" class="btn">Create Post</button>
+            <button name="update_post" type="submit" class="btn">Update Post</button>
         </div>
     </form>
 </div>
