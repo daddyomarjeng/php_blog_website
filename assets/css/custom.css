@@ -324,6 +324,15 @@ section {
     text-align: center;
 }
 
+.post-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem 0;
+}
+
+
 .post-footer {
     border-top: 2px solid #999;
     padding: 2rem;
