@@ -22,30 +22,30 @@ if (mysqli_num_rows($query_run) > 0) {
 
 <div class="container">
     <?php
-    var_dump($post);
+    // var_dump($post);
     // var_dump($cat_name);
     ?>
     <section class="">
-        <div class="blogs">
+        <div class="post">
             <a class="post-nav" href="index.php">Home </a> >>
             <a class="post-nav" href="categories.php?category=<?= $post['cat_slug'] ?>"><?= $post['cat_title'] ?> </a>
             >>
             <a class="post-nav" href="post.php?slug=<?= $post['slug'] ?>"><?= $post['title'] ?> </a>
 
-            <h1 class="heading"><?= $post_name ?></h1>
-            <div class="blogs-content">
+            <div class="post-content">
                 <?php
-                foreach ($posts as $post) {
+                if ($post['image'] != NULL) {
                 ?>
-                <a href="#" class="post-card">
-                    <h4><?= $post['title'] ?></h4>
-                    <small>by: <?= $post['username'] ?></small>
-                    <small>Posted on: <?= date('d M Y', strtotime($post['created_at'])) ?></small>
-                </a>
-
+                <img class="post-img" src="uploads/<?= $post['image'] ?>" alt="">
                 <?php
                 }
                 ?>
+                <h1 class="post-heading"><?= $post['title'] ?></h1>
+                <p class="post-text"><?= $post['content'] ?></p>
+                <div class="post-footer">
+                    <small class="post-author">Author: <?= $post['username'] ?></small>
+                    <small class="post-date">Posted on: <?= date('Y m d', strtotime($post['created_at'])) ?></small>
+                </div>
             </div>
         </div>
         <div class="latest">

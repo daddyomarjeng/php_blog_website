@@ -235,6 +235,7 @@ section {
 }
 
 .blogs,
+.post,
 .categories {
     flex: 3;
 }
@@ -289,6 +290,45 @@ section {
 
 .post-nav {
     color: tomato
+}
+
+.post-content {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.post-img {
+    width: 100%;
+}
+
+.post-heading {
+    font-size: 2rem;
+    color: #444;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.post-text {
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.post-footer {
+    border-top: 2px solid #999;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.post-author,
+.post-date {
+    font-size: 16px;
+    color: #888;
 }
 
 @media (max-width:528px) {
