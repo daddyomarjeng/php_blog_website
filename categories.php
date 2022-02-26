@@ -32,7 +32,7 @@ if (mysqli_num_rows($query_run) > 0) {
                 <?php
                 foreach ($posts as $post) {
                 ?>
-                <a href="#" class="post-card">
+                <a href="post.php?slug=<?= $post['slug'] ?>" class="post-card">
                     <h4><?= $post['title'] ?></h4>
                     <small>by: <?= $post['username'] ?></small>
                     <small>Posted on: <?= date('d M Y', strtotime($post['created_at'])) ?></small>
@@ -49,7 +49,7 @@ if (mysqli_num_rows($query_run) > 0) {
                 <?php
                 foreach ($latest as $post) {
                 ?>
-                <a href="#" class="post-card">
+                <a href="post.php?slug=<?= $post['slug'] ?>" class="post-card">
                     <h4><?= $post['title'] ?></h4>
                     <small>by: <?= $post['username'] ?></small>
                     <small>Posted on: <?= date('d M Y', strtotime($post['created_at'])) ?></small>

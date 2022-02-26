@@ -45,7 +45,13 @@ nav {
 
 .nav-item {
     margin-left: 20px;
-    font-size: 2rem
+    font-size: 2rem;
+    padding: 0 .5rem;
+}
+
+.nav-item:hover {
+    background-color: tomato;
+    border-radius: 20px;
 }
 
 .nav-right {
