@@ -43,7 +43,9 @@ if ($post['user_id'] != $_SESSION['user_id']) {
                 <?php
                 foreach ($categories as $category) {
                 ?>
-                <option value="<?= $category['id'] ?>"><?= $category['title'] ?></option>
+                <option value="<?= $category['id'] ?>" <?= $category['id'] == $post['category_id'] ? 'selected' : '' ?>>
+                    <?= $category['title'] ?>
+                </option>
                 <?php
                 }
                 ?>
@@ -52,13 +54,15 @@ if ($post['user_id'] != $_SESSION['user_id']) {
 
         <div class="form-group">
             <label for="title">Title</label>
-            <input required name="title" type="text" class="form-control" placeholder="Enter post title">
+            <input required name="title" type="text" class="form-control" placeholder="Enter post title"
+                value="<?= $post['title'] ?>">
         </div>
 
         <div class="form-group">
             <label for="title">Content</label>
             <textarea required name="content" id="" rows="3" class="form-control" style="resize:none"
-                placeholder="Enter your post content here"></textarea>
+                placeholder="Enter your post content here"><?= $post['content'] ?>
+            </textarea>
         </div>
         <div class="form-group">
             <label for="title">Choose Blog Image</label>
