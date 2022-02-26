@@ -187,6 +187,7 @@ nav {
 /* Home Screen */
 .container {
     margin-top: 100px;
+    margin-bottom: 300px;
 }
 
 .banner {
@@ -270,6 +271,7 @@ section {
     padding: 0 1rem;
     color: #999;
     align-self: stretch;
+    position: relative;
 }
 
 .latest-content .post-card {
@@ -277,6 +279,11 @@ section {
     flex-direction: column;
     width: 100%;
 }
+
+/* .latest-content .post-card .edit-btn {
+    position: absolute;
+    right: 0;
+} */
 
 .post-card small {
     display: inline-block;
@@ -331,6 +338,16 @@ section {
 .post-date {
     font-size: 16px;
     color: #888;
+}
+
+.edit-btn {
+    /* background-color: tomato; */
+    /* float: right; */
+    /* margin-top: 1rem; */
+    padding: .3rem;
+    color: blue;
+    position: absolute;
+    right: 0;
 }
 
 @media (max-width:528px) {
