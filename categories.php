@@ -60,3 +60,5 @@ if (mysqli_num_rows($query_run) > 0) {
         </div>
     </section>
 </div>
+
+<?php include('includes/footer.php'); ?>
