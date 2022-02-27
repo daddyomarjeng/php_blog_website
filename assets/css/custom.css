@@ -34,7 +34,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 20px;
+    padding: 0 10px;
     /* min-height: 70px */
 }
 
@@ -45,13 +45,13 @@ nav {
 
 .nav-item {
     margin-left: 20px;
-    font-size: 2rem;
-    padding: 0 .5rem;
+    font-size: 1rem;
+    padding: 0 .3rem;
 }
 
 .nav-item:hover {
     background-color: tomato;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .nav-right {
@@ -374,6 +374,55 @@ section {
     border-radius: 10px;
 }
 
+footer {
+    padding: 2rem 2rem 5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgba(196, 162, 162, 0.3)
+}
+
+.heading-light {
+    color: #777
+}
+
+.footer-link {
+    display: block;
+    padding: 1rem;
+
+}
+
+.footer-link:hover {
+    background-color: tomato;
+}
+
+.footer-button {
+    background-color: tomato;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 25%;
+}
+
+.footer-input {
+    padding: 10px;
+    width: 60%;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 80%;
+    margin: 2rem auto;
+    /* border-top: 2px solid #ccc; */
+    /* padding: 1rem; */
+}
+
 @media (max-width:528px) {
     nav {
         flex-direction: column;
@@ -382,6 +431,10 @@ section {
     .nav-items {
         flex-wrap: wrap;
         align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
     }
 
     .profile-items {
