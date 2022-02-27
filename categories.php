@@ -25,6 +25,11 @@ if (mysqli_num_rows($query_run) > 0) {
     // var_dump($posts);
     // var_dump($cat_name);
     ?>
+
+    <form class="search-container" action="search.php" method="get">
+        <input name="search" type="text" class="search-input" placeholder="Search">
+        <button name="search_btn" class="search-button">Search</button>
+    </form>
     <section class="">
         <div class="categories">
             <h1 class="heading"><?= $cat_name ?></h1>

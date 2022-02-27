@@ -5,13 +5,10 @@ include('config/db_connect.php');
 // Search
 if (isset($_GET['search_btn'])) {
     $search = mysqli_real_escape_string($con, $_GET['search']);
-    $query = "SELECT * FROM posts WHERE title LIKE '%$search%'";
+    $query = "SELECT * FROM posts WHERE title LIKE '%$search%' ORDER BY id DESC";
     $query_run = mysqli_query($con, $query);
     if (mysqli_num_rows($query_run) > 0) {
         $posts = $query_run;
-    } else {
-        header("Location: index.php");
-        exit(0);
     }
 }
 ?>
@@ -23,9 +20,15 @@ if (isset($_GET['search_btn'])) {
         <button name="search_btn" class="search-button">Search</button>
     </form>
 
+    <?php
+    if (!mysqli_num_rows($query_run)) {
+        echo "NO Result Found for " . $_GET['search'];
+        exit(0);
+    }
+    ?>
     <section class="blogs-section">
         <div class="blogs">
-            <h1 class="heading">Search Result</h1>
+            <h1 class="heading-light">Search Result for: <?= $_GET['search'] ?></h1>
             <div class="blogs-content">
                 <?php
                 foreach ($posts as $post) {
