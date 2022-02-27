@@ -5,7 +5,10 @@ include('config/db_connect.php');
 // Search
 if (isset($_GET['search_btn'])) {
     $search = mysqli_real_escape_string($con, $_GET['search']);
-    $query = "SELECT * FROM posts WHERE title LIKE '%$search%' ORDER BY id DESC";
+    $query = "SELECT * FROM 
+            posts 
+            WHERE title LIKE '%$search%'
+            ORDER BY id DESC";
     $query_run = mysqli_query($con, $query);
     if (mysqli_num_rows($query_run) > 0) {
         $posts = $query_run;
