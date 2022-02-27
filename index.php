@@ -37,6 +37,11 @@ if (mysqli_num_rows($query_run) > 0) {
 
     <?php include('messages.php'); ?>
 
+    <form class="search-container" action="func.php" method="post">
+        <input type="text" class="search-input" placeholder="Search">
+        <button class="search-button">Search</button>
+    </form>
+
     <section class="blogs-section">
         <div class="blogs">
             <h1 class="heading">Our Blog Posts</h1>
