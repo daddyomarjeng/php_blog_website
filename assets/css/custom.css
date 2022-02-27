@@ -423,6 +423,30 @@ footer {
     /* padding: 1rem; */
 }
 
+/* searchbar */
+.search-container {
+    /* border: 2px solid; */
+    margin: 2rem auto;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    gap: 0
+}
+
+.search-input {
+    flex: 3;
+    padding: .5rem;
+    /* border: none; */
+    /* border: 1px solid tomato; */
+}
+
+.search-button {
+    flex: 1;
+    border: 2px solid tomato;
+    background-color: tomato;
+    padding: .5rem
+}
+
 @media (max-width:528px) {
     nav {
         flex-direction: column;
@@ -482,6 +506,10 @@ footer {
     }
 
     .delete-post {
+        width: 100%;
+    }
+
+    .search-container {
         width: 100%;
     }
 }

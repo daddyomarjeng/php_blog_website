@@ -26,6 +26,7 @@ if (mysqli_num_rows($query_run) > 0) {
     // var_dump($posts);
     // "<br/>";
     // var_dump($latest);
+    // var_dump($post_query);
     ?>
     <div class="banner">
         <div class="overlay">
@@ -36,6 +37,11 @@ if (mysqli_num_rows($query_run) > 0) {
     </div>
 
     <?php include('messages.php'); ?>
+
+    <form class="search-container" action="search.php" method="get">
+        <input name="search" type="text" class="search-input" placeholder="Search">
+        <button name="search_btn" class="search-button">Search</button>
+    </form>
 
     <section class="blogs-section">
         <div class="blogs">
