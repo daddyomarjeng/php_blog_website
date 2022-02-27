@@ -17,6 +17,7 @@ Learning php with MySQL
 - Middleware authentication is made to prevent unauthorized users from accessing pages they are not suppose to access, also used to redirect already loggedin users who want to access login or registration page.
 - User can logout
 - You can filter for a post based on its category
+- You can search for different post
 
 # What you will need to make this project
 
