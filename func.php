@@ -151,7 +151,7 @@ if (isset($_POST['update_post'])) {
             move_uploaded_file($_FILES['image']['tmp_name'], 'uploads/' . $image_name);
         }
         $_SESSION['success'] = "Post Updated Successfully";
-        header("Location: edit-post.php?id=" . $post_id);
+        header("Location: post.php?slug=" . $slug);
         exit(0);
     } else {
         // var_dump(mysqli_error($con, $query_run));

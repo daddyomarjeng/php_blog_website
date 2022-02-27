@@ -25,6 +25,8 @@ if (mysqli_num_rows($query_run) > 0) {
     // var_dump($post);
     // var_dump($cat_name);
     ?>
+    <?php include('messages.php'); ?>
+
     <form class="search-container" action="search.php" method="get">
         <input name="search" type="text" class="search-input" placeholder="Search">
         <button name="search_btn" class="search-button">Search</button>
