@@ -24,4 +24,4 @@ Learning php with MySQL
 
 - Text Editor
 - PHP 
-- MYSQL installed in your computer
+- MYSQL
