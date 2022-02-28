@@ -9,8 +9,8 @@ Learning php with MySQL
 
 # About The Site
 
-- Anybody can visite the site and view different blogs
-- You can register to be able to create your own blog post
+- Anybody can visite the website and view different blogs
+- You can register to be able to create your own blog posts
 - Users can edit and delete blogs created by them
 - Users who are not logged in cannot create, edit, or delete a post
 - Only the creator of a post can edit or delete that post
