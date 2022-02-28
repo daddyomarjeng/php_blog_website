@@ -23,4 +23,5 @@ Learning php with MySQL
 # What you will need to make this project
 
 - Text Editor
-- PHP and MYSQL installed in your computer
+- PHP 
+- MYSQL installed in your computer
