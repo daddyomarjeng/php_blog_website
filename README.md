@@ -18,7 +18,7 @@ Learning php with MySQL
 - redirect is used for already loggedin users who want to access login or registration page.
 - User can logout
 - You can filter for a post based on its category
-- You can search for different posts using search box
+- You can search for different posts using the search box
 
 # What you will need to make this project
 
