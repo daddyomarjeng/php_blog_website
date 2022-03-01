@@ -4,7 +4,7 @@ Learning php with MySQL
 
 # Tech Stack Used
 
-- All code is done with raw PHP, HTML, CSS, and a few lines of Javascript
+- All code is done using PHP, HTML, CSS, and a few lines of Javascript
 - No library or framework is used
 
 # About The Site
